@@ -80,5 +80,7 @@ if __name__ == "__main__":
         print(f"epoch {epoch+1}/{config['num_epochs']} → train loss: {train_loss:.4f} | val loss: {val_loss:.4f}")
         
         # save checkpoint every epoch
-        torch.save(model.state_dict(), f"model_epoch_{epoch+1}.pt")
+        import os
+        os.makedirs("/kaggle/working", exist_ok=True)
+        torch.save(model.state_dict(), f"/kaggle/working/model_epoch_{epoch+1}.pt")
         print(f"model saved → model_epoch_{epoch+1}.pt")
