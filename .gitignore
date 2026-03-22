@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+*.pth
+*.pt
+model_epoch_*.pt
+.ipynb_checkpoints/
+.env
